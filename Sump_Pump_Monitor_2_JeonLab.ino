@@ -1,3 +1,8 @@
+/* Sump pump water level monitor using ESP8266, HC-SR04, and Gmail sender
+   Programmed by Jinseok Jeon, JeonLab.wordpress.com 
+   Gmail sender: http://www.instructables.com/id/ESP8266-GMail-Sender/
+*/
+
 #include <ESP8266WiFi.h>
 #include "Gsender.h"
 
