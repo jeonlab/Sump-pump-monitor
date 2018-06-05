@@ -76,10 +76,10 @@ void setup()
 void loop() {
   cm = measure_cm();
   if (previous_cm == 0) previous_cm = cm;
-  else if (cm - previous_cm > 10) {
+  else if (cm - previous_cm > 10 && int((millis()-lastPumpOnMillis)/milsec_to_min) > 1) {
     pumpIntervalMin = int((millis()-lastPumpOnMillis)/milsec_to_min);
     lastPumpOnMillis = millis();
-  }
+  
 
   data += " " + String(cm);
   Gsender *gsender = Gsender::Instance();
